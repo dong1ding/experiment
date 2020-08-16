@@ -1,5 +1,6 @@
-package com.my.experiment.demo.service;
+package com.my.experiment.demo.service.impl;
 
+import com.my.experiment.demo.service.DemoService;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
