@@ -11,14 +11,15 @@ public class DemoServiceImpl implements DemoService {
     @Override
     public void badLoop(int count) {
         Map<String,Object> map = new ConcurrentHashMap<>();
-        int i = 0;
-        while (true){
-           new Thread(new Runnable() {
-               @Override
-               public void run() {
-                   map.put(i + "",i);
-               }
-           }) .start();
+        for (int i = 0; i < count; i++) {
+            while (true){
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        map.put(Thread.currentThread().getName(),i);
+                    }
+                }) .start();
+            }
         }
     }
 }
