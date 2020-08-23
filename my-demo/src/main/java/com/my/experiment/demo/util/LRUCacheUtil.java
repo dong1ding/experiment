@@ -81,7 +81,7 @@ public class LRUCacheUtil<K,V> {
         if(cacheMap.containsKey(key)){
             Node<K, V> node = cacheMap.get(key);
             node.value = value;
-            cacheMap.put(key,node);   //可有可无，引用同一个node
+//            cacheMap.put(key,node);   //可有可无，引用同一个node
             linkedList.removeCurrentNode(node);
             linkedList.addFirstNode(node);
         }else {
