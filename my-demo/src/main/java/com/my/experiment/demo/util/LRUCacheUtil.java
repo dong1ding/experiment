@@ -3,6 +3,11 @@ package com.my.experiment.demo.util;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * map + 链表实现LRU缓存
+ * @param <K>
+ * @param <V>
+ */
 public class LRUCacheUtil<K,V> {
 
     class Node<K,V>{
